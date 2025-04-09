@@ -1,0 +1,30 @@
+ &control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'fcc-cu'
+    outdir = './tempdir/'
+    pseudo_dir = '../pseudo/'
+ /
+
+ &system
+    ibrav =  2,
+    celldm(1) = 6.800,
+    nat =  1,
+    ntyp = 1,
+    ecutwfc = 30,
+    ecutrho = 240
+    occupations='smearing', smearing='marzari-vanderbilt', degauss=0.02
+ /
+
+ &electrons
+    electron_maxstep = 500
+    conv_thr = 1.0e-8
+    mixing_beta = 0.7
+ /
+
+ATOMIC_SPECIES
+ Cu 63.55 Cu.pbe-dn-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS alat
+ Cu 0.0 0.0 0.0
+K_POINTS (automatic)
+ 3 3 3 0 0 0   
