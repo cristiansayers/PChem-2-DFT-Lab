@@ -1,0 +1,29 @@
+&CONTROL
+  calculation  = 'scf',
+  prefix       = "h2",
+  pseudo_dir   = "../pseudo",
+  outdir       = "./tempdir",
+/
+&SYSTEM
+  ibrav     = 0,
+  nat       = 2,
+  ntyp      = 1,
+  ecutwfc   = 24,
+  ecutrho   = 144,
+/
+&ELECTRONS
+  conv_thr    = 1.0e-7,
+  mixing_beta = 0.7,
+/
+&IONS
+/
+CELL_PARAMETERS {angstrom}
+10.0  0.0  0.0
+ 0.0 10.0  0.0
+ 0.0  0.0 10.0
+ATOMIC_SPECIES
+H 1.0078 H.pbe-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS {angstrom}
+H 0.690  0.0  0.0
+H 0.000  0.0  0.0  0 0 0
+K_POINTS {Gamma}
