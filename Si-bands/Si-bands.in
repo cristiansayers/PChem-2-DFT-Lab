@@ -1,6 +1,6 @@
  &control
     calculation='bands'
-    pseudo_dir = '$PSEUDO_DIR/',
+    pseudo_dir = '../pseudo',
     outdir='./tempdir',
     prefix='silicon'
  /
